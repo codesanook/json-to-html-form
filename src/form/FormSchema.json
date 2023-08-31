@@ -1,42 +1,77 @@
 [
   {
-    "type": "text-split",
+    "type": "splittedText",
+    "name": "tag",
     "label": "Tag",
-    "template": "#%0$s",
-    "name": "tag"
+    "template": "#%s"
   },
   {
-    "type": "text",
+    "type": "currency",
+    "name": "price",
     "label": "Price",
-    "template": "Price %1$s THB naja",
-    "name": "price"
+    "template": "Price %s THB"
   },
   {
     "type": "fieldGroup",
+    "name": "shipping",
     "label": "Free shipping",
     "items": [
       {
         "type": "checkbox",
         "label": "Yes",
+        "value": "yes",
         "template": "Free shipping"
       },
       {
         "type": "specifiedValueCheckbox",
         "label": "No",
-        "textfieldPlaceHolder": "shipping cost in THB",
-        "template": "Shipping cost %0$s THB"
+        "value": "no",
+        "template": "Shipping cost for %s THB"
+      },
+      {
+        "type": "remark",
+        "label": "Remark"
       }
-    ],
-    "name": "shipping"
+    ]
   },
   {
     "type": "fieldGroup",
+    "name": "Play",
     "label": "Playable",
     "items": [
       {
         "type": "checkbox",
         "label": "Yes",
+        "value": "yes",
         "template": "Playable"
+      },
+      {
+        "type": "checkbox",
+        "label": "No",
+        "value": "no",
+        "template": "Not playable"
+      },
+      {
+        "type": "checkbox",
+        "label": "Not tested",
+        "value": "notTested",
+        "template": "Not tested"
+      },
+      {
+        "type": "remark",
+        "label": "Remark"
+      }
+    ]
+  },
+  {
+    "type": "fieldGroup",
+    "name": "Record",
+    "label": "Record",
+    "items": [
+      {
+        "type": "checkbox",
+        "label": "Yes",
+        "template": "✅Record"
       },
       {
         "type": "checkbox",
@@ -53,30 +88,6 @@
         "label": "Remark",
         "template": "%0$s"
       }
-    ],
-    "name": "playStatus"
-  },
-  {
-    "type": "fieldGroup",
-    "label": "warranty",
-    "items": [
-      {
-        "type": "specifiedValueCheckbox",
-        "label": "Yes",
-        "textfieldPlaceHolder": "Specify days, months, years",
-        "template": "warranty for %0$s"
-      },
-      {
-        "type": "checkbox",
-        "label": "No",
-        "template": "No warranty"
-      },
-      {
-        "type": "text",
-        "label": "Remark",
-        "template": "%0$s"
-      }
-    ],
-    "name": "warranty"
+    ]
   }
 ]
