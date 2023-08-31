@@ -1,0 +1,82 @@
+[
+  {
+    "type": "text-split",
+    "label": "Tag",
+    "template": "#%0$s",
+    "name": "tag"
+  },
+  {
+    "type": "text",
+    "label": "Price",
+    "template": "Price %1$s THB naja",
+    "name": "price"
+  },
+  {
+    "type": "fieldGroup",
+    "label": "Free shipping",
+    "items": [
+      {
+        "type": "checkbox",
+        "label": "Yes",
+        "template": "Free shipping"
+      },
+      {
+        "type": "specifiedValueCheckbox",
+        "label": "No",
+        "textfieldPlaceHolder": "shipping cost in THB",
+        "template": "Shipping cost %0$s THB"
+      }
+    ],
+    "name": "shipping"
+  },
+  {
+    "type": "fieldGroup",
+    "label": "Playable",
+    "items": [
+      {
+        "type": "checkbox",
+        "label": "Yes",
+        "template": "Playable"
+      },
+      {
+        "type": "checkbox",
+        "label": "No",
+        "template": "Not playable"
+      },
+      {
+        "type": "checkbox",
+        "label": "Not tested",
+        "template": "Not tested"
+      },
+      {
+        "type": "text",
+        "label": "Remark",
+        "template": "%0$s"
+      }
+    ],
+    "name": "playStatus"
+  },
+  {
+    "type": "fieldGroup",
+    "label": "warranty",
+    "items": [
+      {
+        "type": "specifiedValueCheckbox",
+        "label": "Yes",
+        "textfieldPlaceHolder": "Specify days, months, years",
+        "template": "warranty for %0$s"
+      },
+      {
+        "type": "checkbox",
+        "label": "No",
+        "template": "No warranty"
+      },
+      {
+        "type": "text",
+        "label": "Remark",
+        "template": "%0$s"
+      }
+    ],
+    "name": "warranty"
+  }
+]
